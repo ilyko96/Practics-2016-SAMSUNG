@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<link rel="stylesheet" href="./lib/tau/mobile/theme/default/tau.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css" />
+<title>Tizen Web IDE - Template - Tizen - Tizen Web UI Framework
+	- Multi Page</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Start of first page: #one -->
+	<div class="ui-page" id="one">
+		<div class="ui-header">
+			<h1>Multi-page application</h1>
+		</div>
+		<!-- /header -->
+
+		<div class="ui-content">
+			<textarea id="textarea-data-to-write"></textarea>
+			
+			<ul class="ui-listview">
+				<li class="ui-group-index">File Management</li>
+				<li class="ui-li-anchor"><a href="#popup" id="button-write-file">Write data</a></li>
+				<li class="ui-li-anchor"><a href="#two" id="button-read-file">Read data</a></li>
+				<li class="ui-li-anchor"><a href="#popup" id="button-delete-file">Delete data</a></li>
+				<!-- <li class="ui-li-anchor"><a href="#popup" data-rel="popup"
+					data-position-to="window" id="button-read-file">Read data</a></li> -->
+			</ul>
+			<div id="popup" class="ui-popup center_title_1btn">
+				<div class="ui-popup-header">Data from file</div>
+				<div class="ui-popup-content popup-content-padding" id="popup-data-from-file"></div>
+				<div class="ui-popup-footer">
+					<a class="ui-btn ui-inline" data-rel="back">Close popup</a>
+				</div>
+			</div>
+		</div>
+		<!-- /content -->
+	</div>
+	<!-- /page one -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Start of second page: #two -->
+	<div class="ui-page" id="two">
+		<div class="ui-header">
+			<h1>Two</h1>
+		</div>
+		<!-- /header -->
+
+		<div class="ui-content">
+			<p id="p-data-from-file"></p>
+			<p>
+				<a href="#one" class="ui-btn ui-inline">Back to page "one"</a>
+			</p>
+		</div>
+		<!-- /content -->
+	</div>
+	<!-- /page two -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="./lib/tau/mobile/js/tau.js"></script>
+	<script type="text/javascript" src="./lib/jquery.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
