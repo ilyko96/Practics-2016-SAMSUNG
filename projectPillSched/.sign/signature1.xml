@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>cKL71fVv9jrfiFmjPdWFUmhAQQXuqlYQhCyRoiDq4rQ=</DigestValue>
+<DigestValue>KYfd7D2XB5qtdzx5V3PQDLfk1i3ZzhDNZvvsEY1ZURA=</DigestValue>
 </Reference>
 <Reference URI="catalog.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -12,7 +12,7 @@
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>hPP/udMCcIoMbc1BrUIwZENLvtttH6rzGUup8bSpJAE=</DigestValue>
+<DigestValue>LW4xSXVyyX+FHIdjGV0v5N1Ly9miCl4tviqxVjumN8I=</DigestValue>
 </Reference>
 <Reference URI="css%2Ffonts%2FFlat-UI-Icons-24.ttf">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -92,7 +92,7 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>wclZDDwVdgZzMgeU6OYQDEgzd1j5Ths7ZkYGT0gGhLM=</DigestValue>
+<DigestValue>sfopKC/B/16VA57fUt2doGEZIFwTEXgIlrqYQ7zX218=</DigestValue>
 </Reference>
 <Reference URI="js%2Flib%2Fjquery.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -108,7 +108,7 @@
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>i7hdvEid/0mELtxgW1Yh2EwbuJIQ87iP1psYAyFgKjg=</DigestValue>
+<DigestValue>Raa5gqIbtUcZbyfOdfBTYc6nzU9FRutIs4/KNWxTikQ=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -119,11 +119,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-Qvf1xL7WcXrnWu9fTU+iIx4aCZE0ht/gWWjtgSSNgDyd9XcUAOO/Rx+m/k3j+5nMXIeEo/09NdhH
-x1YWoP8DOdH2b3YgU+8brN7BWCAtUwadlv45sbWvebZDCXwLU85wWiyGUy+t8mdWhQhAQiaD+KLh
-PFv4pSp/vSJE5lUdyGrprCagadhIDFPNQAsHspdKXYjKgGFHi82Te0cMk4B4Nv8Al6uFoq7LIrSr
-8y0Lfwo48VuUfSfyreDK+lYXKbR17i6ikHbzoaEbZT2jmxgHtjwVz127Ftvfu69kB/s1BOib+e8Z
-f4mtsR2rvr6hSfcJEgHQkpjH1NK04vGhXWKjzw==
+ErYSIftoS/O0yH1k/8dxwJIzqpwQCyTew8Yi4QWb4WjY3BqgpSQenYbsamlfObm6DwnzNnVVRmqe
+mRoMw0DRz8LgHqutdpto06Yzf29/aKl/bLiggxtMtdxXBRvr1VtmdqOlSS0nPGPT1dk2S1xA47Qe
+Uv3YjXCEiKu0MAw6I0PZSKHHjoeAYSlEe94AH0VyFUHiR6leOcX/s6ICaXJ9Bc0UvvjmjIZzqKRY
+VT98e8OAbqeim7NLNTKbQMrTZfuAboS2potvnFIQEDSFL6jiIPjrsgbusDls9oRksLhL1friS7Ko
+edR8rcnPMRqOBbzFXGRQjmcqZ/tQNBXdNa46Ng==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

@@ -7,7 +7,20 @@
 	href="css/jquery.mobile.flatui.css" />
 <script src="js/lib/jquery.js"></script>
 <script src="js/lib/jquery.mobile-1.4.0-rc.1.js"></script>
+<script src="js/main.js"></script>
 </head>
+<!-- 
+// Panels: http://demos.jquerymobile.com/1.4.5/panel/
+// Pages: http://demos.jquerymobile.com/1.3.2/widgets/pages/
+// NavBar: http://demos.jquerymobile.com/1.4.2/tabs/tabbed-content.html
+// Search: http://demos.jquerymobile.com/1.2.1/docs/forms/search/index.html
+ -->
+<!-- TODO:
+// Search with dropdown-popup: http://demos.jquerymobile.com/1.4.2/selectmenu-custom-filter/
+
+// Open panel by swipe: http://demos.jquerymobile.com/1.3.2/examples/panels/panel-swipe-open.html
+// Tabbed Views (with swipe): http://demos.jquerymobile.com/1.4.2/swipe-page/
+-->
 <body>
 
 
@@ -17,23 +30,18 @@
 
 
 
-	<div data-role="page" id="one">
-
-
-		<div data-role="panel" id="panel" data-theme="a">
-			<!-- TODO: open panel by swipe: http://demos.jquerymobile.com/1.3.2/examples/panels/panel-swipe-open.html -->
-			<button data-icon="flat-calendar">Month View</button>
-			<button data-icon="flat-checkround">Day View</button>
-			<button data-icon="flat-plus">Add Schedule</button>
-			<div data-role="content"></div>
-		</div>
 
 
 
+
+
+
+
+	<div data-role="page" id="page-sched">
 		<div data-role="header">
-			<a data-iconpos="notext" href="#panel" data-role="button"
+			<a data-iconpos="notext" href="#panel-sched" data-role="button"
 				data-icon="flat-menu"></a>
-			<h1>Pills Scheduler</h1>
+			<h1 style="margin-left:10px;">PillSched - Schedule</h1>
 		</div>
 
 		<div data-role="content" data-theme="f">
@@ -46,6 +54,17 @@
 				<li>Read-only list item</li>
 			</ul>
 		</div>
+		
+		
+
+		<div data-role="panel" id="panel-sched" data-theme="a">
+			<input type="search" name="search" id="search-basic" value="" />
+			<a href="#page-month" data-role="button" data-icon="flat-calendar">Month View</a>
+			<a href="#page-day" data-role="button" data-icon="flat-checkround">Day View</a>
+			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
+		</div>
+		
+		
 	</div>
 
 
@@ -57,6 +76,119 @@
 
 
 
-	<div id="highlight"></div>
+
+
+
+
+
+
+
+
+	<div data-role="page" id="page-month">
+		<div data-role="header">
+			<a data-iconpos="notext" href="#panel-month" data-role="button"
+				data-icon="flat-menu"></a>
+			<h1 style="margin-left:10px;">PillSched - Month</h1>
+		</div>
+
+		<div data-role="content" data-theme="f">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Linked list item</a></li>
+				<li>Read-only list item</li>
+			</ul>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Linked list item</a></li>
+				<li>Read-only list item</li>
+			</ul>
+		</div>
+
+
+		<div data-role="panel" id="panel-month" data-theme="a">
+			<a href="#page-sched" data-role="button" data-icon="flat-time">Schedule View</a>
+			<a href="#page-day" data-role="button" data-icon="flat-checkround">Day View</a>
+			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
+		</div>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<div data-role="page" id="page-day">
+		<div data-role="header">
+			<a data-iconpos="notext" href="#panel-month" data-role="button"
+				data-icon="flat-menu"></a>
+			<h1 style="margin-left:10px;">PillSched - Day</h1>
+		</div>
+
+		<div data-role="content" data-theme="f">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Linked list item</a></li>
+				<li>Read-only list item</li>
+			</ul>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#">Linked list item</a></li>
+				<li>Read-only list item</li>
+			</ul>
+		</div>
+
+
+		<div data-role="panel" id="panel-month" data-theme="a">
+			<a href="#page-sched" data-role="button" data-icon="flat-time">Schedule View</a>
+			<a href="#page-month" data-role="button" data-icon="flat-checkround">Month View</a>
+			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
+		</div>
+		
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<div data-role="page" id="page-edit">
+		<div data-role="header">
+			<h1 style="margin-left:10px;">PillSched - Add/Edit</h1>
+		</div>
+
+		<div data-role="content" data-theme="f">
+			<input type="datetime-local" />
+			<a href="#page-sched" data-role="button" data-icon="flat-time">Cancel</a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
