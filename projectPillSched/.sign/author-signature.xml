@@ -4,7 +4,7 @@
 <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"></SignatureMethod>
 <Reference URI="catalog.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>IBXONWh5z/jkbiDXUat0MUHAXOHjGwZ38UlnCv1A3T4=</DigestValue>
+<DigestValue>nhXomJZQbzQXSJM4c7nXPIa1zShdY15PbXaDbOape5k=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -78,13 +78,9 @@
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>W3qbsUhA9pysT+bEK/I6yoZqkqC5aaz6S/350+Xl3ac=</DigestValue>
 </Reference>
-<Reference URI="db.csv">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>/3mIwGjNMQL81QZhorfhJm+eT2zEufPahCvkLOAK9T8=</DigestValue>
-</Reference>
 <Reference URI="generate_data.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>1ztEuFaS5ubsq8JvHCbd2cPXouZBAw2nt+btqth86is=</DigestValue>
+<DigestValue>qEGKBwiuA4MmFm4B//WFc/OWwGiXolnkfhgHVvTq4Ac=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -96,19 +92,15 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>NG8ddPb47NyA3lWicqIiFjTEADmkukNuvK2KBqK1O+I=</DigestValue>
+<DigestValue>TJiovQj2Jv8DadHnXDhcuDaYSlcm5lgaWaMWPPKLRmc=</DigestValue>
 </Reference>
-<Reference URI="js%2Flib%2Fjquery.js">
+<Reference URI="js%2Fjquery.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>M+4S2r6z+EU0hKwyu98KcynJYfxj4sPyhZwt1m1AHUw=</DigestValue>
 </Reference>
-<Reference URI="js%2Flib%2Fjquery.mobile-1.4.0-rc.1.js">
+<Reference URI="js%2Fjquery.mobile-1.4.0-rc.1.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
 <DigestValue>mwGg7D2FntFBjqvWsVxst+RrdtiiWtsjCnTyTYFS5pc=</DigestValue>
-</Reference>
-<Reference URI="js%2Flib%2Fjquery.mobile-1.4.5.min.js">
-<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>Lsk+CDPOzTapLoAzWW0G/WeQeViS3FMzywpzPZV8SXk=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -123,11 +115,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-G00B1QG05pFvLihv7QphV6/vAWTrOzsyIwoMw/G5TXd5h89HSBnMCqb6vCkVkYRWYpSxjR2ac6V5
-3xf692R6iU+EF0C9zVQOESzmvuEITkSiO2DhOWC7TF6Snk+nmERpu3mO3FYioRxlIqL8Ho1DVGkc
-bmjCUXKtPhFSemZiH6mGxMnjsXE9muKYXqiP3eH87QCLdPvUGErL7QI7eUKXyRq6cCcGsn2fjSTh
-56MtxL1YLGjyeEq1EhUwmsr2KxxsQ9bfYSRj0qTaSLDp4TdNsvV9wkd1J3Y95/02TgJfopNcxZaV
-5/6uq0jnUu6YvJFxkO3WE7EhnTatPoK9RRUyDA==
+WYjklDHDTaA9mP7ST0eMkiVs01K7UlQnTHt8iXi0o89oZBbC6Ubt5OVt86m8sOHfRsrWX3S+H32C
+vjmZcQWBoHe4KSehp8929wfqP7IgHpEbQRzfX+ScvbvUoRWxtkXmFCksqExJViIZ6trgJ8A5ggLB
+vHlhBaQhIFNJsQWqSNubOgH+hW9FSJykWbd4XfmxK9Opg2F1RForays1tab5oh0YSPKlNcapptk6
+0zNC3YBAmM1GZeB25slv3Jx6lixUR7iqtVsua1bYJGHzyng7FaH5MWKaTj9ruoyRN/jiNoRv9RoO
+Ka068V/Tpe4BLJ97Z4Dl63sTPDxzCggI5dXWiw==
 </SignatureValue>
 <KeyInfo>
 <X509Data>
