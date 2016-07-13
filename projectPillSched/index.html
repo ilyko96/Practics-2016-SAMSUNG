@@ -17,6 +17,7 @@
 // Buttons: https://demos.jquerymobile.com/1.2.0/docs/buttons/buttons-inline.html
 // Grids: http://demos.jquerymobile.com/1.1.2/docs/content/content-grids.html
 // TextInputs: http://demos.jquerymobile.com/1.1.1/docs/forms/textinputs/
+// Filterable list: https://api.jquerymobile.com/filterable/
  -->
 <!-- TODO:
 // Search with dropdown-popup: http://demos.jquerymobile.com/1.4.2/selectmenu-custom-filter/
@@ -168,7 +169,8 @@
 	
 	
 	
-	http://demos.jquerymobile.com/1.1.1/docs/forms/textinputs/
+	
+	
 	
 	
 	
@@ -179,12 +181,27 @@
 		</div>
 
 		<div data-role="content" data-theme="f">
-			<ul data-role="listview" data-inset="true">
-				<fieldset class="ui-grid-a">
-					<div class="ui-block-a" style="width:89%"><input type="text" /></div>
-					<div class="ui-block-b" style="width:11%; margin-top: 5px;"><a data-iconpos="notext" data-role="button" data-icon="plus" title="Add" data-theme="c">Home</a></div>
-				</fieldset>
-			</ul>
+			<div id="edit-name-wrapper">
+				<ul data-role="listview" data-inset="true" id="edit-name-list">
+					<fieldset class="ui-grid-a edit-name-item-origin">
+						<div class="ui-block-a" style="width:85%;">
+							<form>
+							    <select id="filter-menu-origin" data-filter-reveal="true" data-native-menu="false">
+							        <option value="SFO">San Francisco</option>
+							        <option value="LAX">Los Angeles</option>
+							        <option value="YVR">Vancouver</option>
+							        <option value="YYZ">Toronto</option>
+							    </select>
+							</form>
+						</div>
+						<div class="ui-block-b" style="width:10%; margin-top: 7px; margin-left: 10px;">
+							<a data-iconpos="notext" data-role="button" data-icon="plus" title="Add" id="edit-name-btn-add">Add</a>
+						</div>
+					</fieldset>
+				</ul>
+			</div>	
+		</div>
+		<div data-role="footer">
 			<a href="#page-sched" data-role="button" data-icon="flat-cross">Cancel</a>
 		</div>
 	</div>
