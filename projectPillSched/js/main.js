@@ -12,14 +12,15 @@ $(document).ready(function() {
 //
 // Edit page. Smart search logic
 var edit_name_list_cnt = 0;
+$(document).ready(function() {addSmartSearch();});
 function addSmartSearch(id) {
-	$.mobile.document
+	$("#filter-menu-"+(id ? id : 'origin')+"-menu")
 	// "filter-menu-menu" is the ID generated for the listview when it is
 	// created
 	// by the custom selectmenu plugin. Upon creation of the listview widget
 	// we
 	// want to prepend an input field to the list to be used for a filter.
-	.on("listviewcreate", "#filter-menu-"+(id ? id : 'origin')+"-menu", function(e) {
+	.on("listviewcreate", function(e) {
 				var input,
 					listbox = $("#filter-menu-"+(id ? id : 'origin')+"-listbox"),
 					form = listbox.jqmData("filter-form"),
@@ -44,7 +45,7 @@ function addSmartSearch(id) {
 				listview.filterable({
 					input : input
 				});
-			})
+			});
 	// The custom select list may show up as either a popup or a dialog,
 	// depending how much vertical room there is on the screen. If it shows
 	// up
@@ -54,7 +55,7 @@ function addSmartSearch(id) {
 	//
 	// After the dialog is closed, the form containing the filter input is
 	// transferred back into the popup.
-	.on("pagebeforeshow pagehide", "#filter-menu-"+(id ? id : 'origin')+"-dialog", function(e) {
+	$("#filter-menu-"+(id ? id : 'origin')+"-dialog").on("pagebeforeshow pagehide", function(e) {
 				var form = $("#filter-menu-"+(id ? id : 'origin')+"-listbox").jqmData("filter-form"),
 					placeInDialog = (e.type === "pagebeforeshow"),
 					destination = placeInDialog ? $(e.target).find(".ui-content") : $("#filter-menu-"+(id ? id : 'origin')+"-listbox");
@@ -88,19 +89,31 @@ $(document).ready(function() {
 //</fieldset>
 	var id = edit_name_list_cnt;
 	$('#edit-name-btn-add').click(function() {	
+//		var fieldset = $('<fieldset class="ui-grid-a edit-name-item-'+id+'">'+
+//				'		<div class="ui-block-a" style="width:85%;">' +
+//							'<form>' +
+//							    '<select id="filter-menu-'+id+'" data-filter-reveal="true" data-native-menu="false">' +
+//							        '<option value="SFO">San Francisco</option>' +
+//							        '<option value="LAX">Los Angeles</option>' +
+//							        '<option value="YVR">Vancouver</option>' +
+//							        '<option value="YYZ">Toronto</option>' +
+//							    '</select>' +
+//							'</form>' +
+//						'</div>' +
+//						'</fieldset>');
 		var fieldset = $('<fieldset class="ui-grid-a edit-name-item-'+id+'">'+
-				'		<div class="ui-block-a" style="width:85%;">' +
+							'<div class="ui-block-a" style="width:85%;">' +
 							'<form>' +
-							    '<select id="filter-menu-'+id+'" data-filter-reveal="true" data-native-menu="false">' +
-							        '<option value="SFO">San Francisco</option>' +
-							        '<option value="LAX">Los Angeles</option>' +
-							        '<option value="YVR">Vancouver</option>' +
-							        '<option value="YYZ">Toronto</option>' +
-							    '</select>' +
-							'</form>' +
-						'</div>' +
-						'</fieldset>');
+							    '<div class="ui-select">'+
+							    '<a href="#filter-menu-'+id+'-listbox" role="button" id="filter-menu-'+id+'-button" aria-haspopup="true" class="ui-btn ui-icon-carat-d ui-btn-icon-right ui-corner-all ui-shadow" data-rel="popup"><span>San Francisco</span></a><select id="filter-menu-'+id+'" data-filter-reveal="true" data-native-menu="false" tabindex="-1">'+
+							        '<option value="SFO">San Francisco</option>'+
+							        '<option value="LAX">Los Angeles</option>'+
+							        '<option value="YVR">Vancouver</option>'+
+							        '<option value="YYZ">Toronto</option>'+
+							    '</select><div style="display: none;" id="filter-menu-'+id+'-listbox-placeholder"><!-- placeholder for filter-menu-'+id+'-listbox --></div></div>'+
+							'</form>')
 		$('#edit-name-list').append(fieldset);
+		addSmartSearch(id);
 		edit_name_list_cnt++;
 	});	
 });
