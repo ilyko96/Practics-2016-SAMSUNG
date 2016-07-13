@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery.js"></script>
+</head>
+<body>
+<select id="content"></select>
+<script>
+((function(){
+	$.get('db.csv', null, function(d) {
+		$('#content').html(d);
+	});
+})())
+</script>
+</body>
+</html>

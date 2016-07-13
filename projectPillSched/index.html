@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css"
-	href="css/jquery.mobile.flatui.css" />
-<script src="js/lib/jquery.js"></script>
-<script src="js/lib/jquery.mobile-1.4.0-rc.1.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile.flatui.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+
 <script src="js/main.js"></script>
 </head>
 <!-- 
@@ -96,14 +99,7 @@
 		</div>
 
 		<div data-role="content" data-theme="f">
-			<ul data-role="listview" data-inset="true">
-				<li><a href="#">Linked list item</a></li>
-				<li>Read-only list item</li>
-			</ul>
-			<ul data-role="listview" data-inset="true">
-				<li><a href="#">Linked list item</a></li>
-				<li>Read-only list item</li>
-			</ul>
+			<div id="calendar"></div>
 		</div>
 
 
@@ -183,7 +179,8 @@
 		<div data-role="content" data-theme="f">
 			<div id="edit-name-wrapper">
 				<ul data-role="listview" data-inset="true" id="edit-name-list">
-					<fieldset class="ui-grid-a edit-name-item-origin">
+					<label for="edit-name-item">Medicine:</label>
+					<fieldset class="ui-grid-a edit-name-item-origin" id="edit-name-item">
 						<div class="ui-block-a" style="width:85%;">
 							<form>
 							    <select id="filter-menu-origin" data-filter-reveal="true" data-native-menu="false">
@@ -199,10 +196,50 @@
 						</div>
 					</fieldset>
 				</ul>
-			</div>	
+			</div>
+			<div id="edit-freq-wrapper">
+				<label for="edit-freq-form">Frequency:</label>
+				<form id="edit-freq-form">
+				    <select id="edit-freq-select">
+				        <option value="">3 times per day</option>
+				        <option value="">2 times per day</option>
+				        <option value="">In the morning</option>
+				        <option value="">In the evening</option>
+				    </select>
+				</form>
+			</div>
+			<div id="edit-duration-wrapper">
+				<label for="edit-duration-list">Duration:</label>
+				<ul data-role="listview" data-inset="true" id="edit-duration-list">
+					<li>
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="edit-duration-input-start">Start:</label>
+							</div>
+							<div class="ui-block-b">
+								<input type="date" id="edit-duration-input-start"/>
+							</div>
+						</fieldset>
+					</li>
+					<li>
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="edit-duration-input-start">End:</label>
+							</div>
+							<div class="ui-block-b">
+								<input type="date" id="edit-duration-input-end"/>
+							</div>
+						</fieldset>
+					</li>
+				</ul>
+			</div>
+			<div id="edit-notification-wrapper">
+				asd
+			</div>
 		</div>
 		<div data-role="footer">
-			<a href="#page-sched" data-role="button" data-icon="flat-cross">Cancel</a>
+			<a href="#page-sched" class="ui-btn-left" data-role="button" data-icon="flat-cross">Cancel</a>
+			<a href="#" class="ui-btn-right" data-role="button" data-icon="flat-checkround" id="edit-btn-save">Save</a>
 		</div>
 	</div>
 
