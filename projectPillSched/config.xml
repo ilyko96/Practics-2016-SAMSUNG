@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/projectPillSched" version="1.0.0" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/projectPillSched" version="1.0.0" viewmodes="maximized">
+    <tizen:app-control>
+        <tizen:src name="alarm.html"/>
+        <tizen:operation name="http://tizen.org/appcontrol/operation/pillschedalarm"/>
+    </tizen:app-control>
     <tizen:application id="PIjLJIWZeM.projectPillSched" package="PIjLJIWZeM" required_version="2.4"/>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="icon.png"/>
     <name>projectPillSched</name>
+    <tizen:privilege name="http://tizen.org/privilege/alarm"/>
+    <tizen:privilege name="http://tizen.org/privilege/calendar.read"/>
+    <tizen:privilege name="http://tizen.org/privilege/calendar.write"/>
+    <tizen:privilege name="http://tizen.org/privilege/notification"/>
     <tizen:profile name="mobile"/>
+    <tizen:setting screen-orientation="portrait" context-menu="enable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
 </widget>

@@ -3,5 +3,5 @@
 #modify
 res/wgt/author-signature.xml
 res/wgt/signature1.xml
-res/wgt/db.csv
-res/wgt/generate_data.html
+res/wgt/js\alarm.js
+res/wgt/js\pageedit.js

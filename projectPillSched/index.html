@@ -9,8 +9,11 @@
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery.mobile-1.4.0-rc.1.js"></script>
+<!-- <script src="js/jquery.mobile-1.4.5.js"></script>-->
 
 <script src="js/main.js"></script>
+<script src="js/pageedit.js"></script>
+<script src="js/pagesched.js"></script>
 </head>
 <!-- 
 // Panels: http://demos.jquerymobile.com/1.4.5/panel/
@@ -51,24 +54,21 @@
 			<h1 style="margin-left:10px;">PillSched - Schedule</h1>
 		</div>
 
-		<div data-role="content" data-theme="f">
-			<ul data-role="listview" data-inset="true">
+		<div data-role="content" data-theme="f" id="sched-list">
+			<!--<ul data-role="listview" data-inset="true">
 				<li><a href="#">Linked list item</a></li>
 				<li>Read-only list item</li>
-			</ul>
-			<ul data-role="listview" data-inset="true">
-				<li><a href="#">Linked list item</a></li>
-				<li>Read-only list item</li>
-			</ul>
+			</ul>-->
 		</div>
 		
 		
 
 		<div data-role="panel" id="panel-sched" data-theme="a">
-			<input type="search" name="search" id="search-basic" value="" />
-			<a href="#page-month" data-role="button" data-icon="flat-calendar">Month View</a>
-			<a href="#page-day" data-role="button" data-icon="flat-checkround">Day View</a>
+			<!--<input type="search" name="search" id="search-basic" value="" />-->
+			<a href="#" data-role="button" data-icon="flat-calendar" data-theme="c">Month View</a>
+			<a href="#" data-role="button" data-icon="flat-checkround" data-theme="c">Day View</a>
 			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
+			<a href="#page-settings" data-role="button" data-icon="flat-settings">Settings</a>
 		</div>
 		
 		
@@ -76,85 +76,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div data-role="page" id="page-month">
-		<div data-role="header">
-			<a data-iconpos="notext" href="#panel-month" data-role="button"
-				data-icon="flat-menu"></a>
-			<h1 style="margin-left:10px;">PillSched - Month</h1>
-		</div>
-
-		<div data-role="content" data-theme="f">
-			<div id="calendar"></div>
-		</div>
-
-
-		<div data-role="panel" id="panel-month" data-theme="a">
-			<a href="#page-sched" data-role="button" data-icon="flat-time">Schedule View</a>
-			<a href="#page-day" data-role="button" data-icon="flat-checkround">Day View</a>
-			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
-		</div>
-		
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	<div data-role="page" id="page-day">
-		<div data-role="header">
-			<a data-iconpos="notext" href="#panel-month" data-role="button"
-				data-icon="flat-menu"></a>
-			<h1 style="margin-left:10px;">PillSched - Day</h1>
-		</div>
-
-		<div data-role="content" data-theme="f">
-			<ul data-role="listview" data-inset="true">
-				<li><a href="#">Linked list item</a></li>
-				<li>Read-only list item</li>
-			</ul>
-			<ul data-role="listview" data-inset="true">
-				<li><a href="#">Linked list item</a></li>
-				<li>Read-only list item</li>
-			</ul>
-		</div>
-
-
-		<div data-role="panel" id="panel-month" data-theme="a">
-			<a href="#page-sched" data-role="button" data-icon="flat-time">Schedule View</a>
-			<a href="#page-month" data-role="button" data-icon="flat-checkround">Month View</a>
-			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
-		</div>
-		
-		
-	</div>
-	
-	
 	
 	
 	
@@ -173,6 +94,8 @@
 
 	<div data-role="page" id="page-edit">
 		<div data-role="header">
+			<a data-iconpos="notext" href="#page-sched" data-role="button"
+				data-icon="home" id="page-edit-btn-home"></a>
 			<h1 style="margin-left:10px;">PillSched - Add/Edit</h1>
 		</div>
 
@@ -180,18 +103,15 @@
 			<div id="edit-name-wrapper">
 				<ul data-role="listview" data-inset="true" id="edit-name-list">
 					<label for="edit-name-item">Medicine:</label>
-					<fieldset class="ui-grid-a edit-name-item-origin" id="edit-name-item">
+					<fieldset class="ui-grid-a" id="edit-name-item-1">
 						<div class="ui-block-a" style="width:85%;">
-							<form>
-							    <select id="filter-menu-origin" data-filter-reveal="true" data-native-menu="false">
-							        <option value="SFO">San Francisco</option>
-							        <option value="LAX">Los Angeles</option>
-							        <option value="YVR">Vancouver</option>
-							        <option value="YYZ">Toronto</option>
-							    </select>
+							<form class="ui-filterable">
+								<input type="text" data-type="search" id="edit-name-input-1" />
 							</form>
+							<ul id="edit-name-autocomplete-list-1" data-role="listview" data-inset="true" data-theme="c" class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-c">
+							</ul>
 						</div>
-						<div class="ui-block-b" style="width:10%; margin-top: 7px; margin-left: 10px;">
+						<div class="ui-block-b" style="width:10%; margin-top: 0px; margin-left: 10px;" id="edit-name-add-wrapper">
 							<a data-iconpos="notext" data-role="button" data-icon="plus" title="Add" id="edit-name-btn-add">Add</a>
 						</div>
 					</fieldset>
@@ -201,10 +121,11 @@
 				<label for="edit-freq-form">Frequency:</label>
 				<form id="edit-freq-form">
 				    <select id="edit-freq-select">
-				        <option value="">3 times per day</option>
-				        <option value="">2 times per day</option>
-				        <option value="">In the morning</option>
-				        <option value="">In the evening</option>
+				        <option value="0">3 times per day</option>
+				        <option value="1">2 times per day</option>
+				        <option value="2">In the morning</option>
+				        <option value="3">In the evening</option>
+				        <option value="4">In the noon</option>
 				    </select>
 				</form>
 			</div>
@@ -234,11 +155,20 @@
 				</ul>
 			</div>
 			<div id="edit-notification-wrapper">
-				asd
+				<label for="edit-notification-form">Notification:</label>
+				<form id="edit-notification-form">
+				    <select id="edit-notification-select">
+				        <option value="0">5 minutes before</option>
+				        <option value="1">10 minutes before</option>
+				        <option value="2">15 minutes before</option>
+				        <option value="3">30 minutes before</option>
+				        <option value="4">1 hour before</option>
+				    </select>
+				</form>
 			</div>
 		</div>
 		<div data-role="footer">
-			<a href="#page-sched" class="ui-btn-left" data-role="button" data-icon="flat-cross">Cancel</a>
+			<a href="#" class="ui-btn-left" data-role="button" data-icon="flat-cross" id="edit-btn-delete">Delete</a>
 			<a href="#" class="ui-btn-right" data-role="button" data-icon="flat-checkround" id="edit-btn-save">Save</a>
 		</div>
 	</div>
@@ -252,5 +182,55 @@
 
 
 
+
+
+
+
+
+	<div data-role="page" id="page-settings">
+		<div data-role="header">
+			<a data-iconpos="notext" href="#panel-settings" data-role="button"
+				data-icon="flat-menu"></a>
+			<h1 style="margin-left:10px;">PillSched - Settings</h1>
+		</div>
+
+		<div data-role="content" data-theme="f">
+			<ul data-role="listview" data-inset="true">
+				<li>
+					<a href="#" id="page-settings-btn-receive_db">Update DataBase</a>
+				</li>
+			</ul>
+		</div>
+
+
+		<div data-role="panel" id="panel-settings" data-theme="a">
+			<a href="#page-sched" data-role="button" data-icon="flat-time">Schedule View</a>
+			<a href="#" data-role="button" data-icon="flat-calendar" data-theme="c">Month View</a>
+			<a href="#" data-role="button" data-icon="flat-checkround" data-theme="c">Day View</a>
+			<a href="#page-edit" data-role="button" data-icon="flat-plus">Add Schedule</a>
+		</div>
+		
+		
+	</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </body>
 </html>

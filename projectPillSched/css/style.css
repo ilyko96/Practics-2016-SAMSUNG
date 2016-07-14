@@ -6,8 +6,12 @@ body {
     margin: 0px auto;
 }
 
+[data-role="header"] {
+	 height:64px;
+}
+
 header h1 {
-    font-size: 36px;
+    font-size: 48px;
     margin: 0px;
 }
 
